@@ -1,0 +1,5 @@
+check process clamav-mirror
+  with pidfile /var/vcap/sys/run/clamav-mirror/pid
+  start program "/var/vcap/jobs/clamav-mirror/bin/ctl start"
+  stop program "/var/vcap/jobs/clamav-mirror/bin/ctl stop"
+  group vcap

@@ -1,0 +1,26 @@
+language: go
+
+go:
+  - 1.5.x
+  - 1.6.x
+  - 1.7.x
+  - 1.8.x
+  - 1.9.x
+  - tip
+  - master
+
+install:
+  - go get -v github.com/mitchellh/gox
+
+script:
+  - go test -v -short -race .
+  - gox -verbose -parallel=2
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+matrix:
+  allow_failures:
+    - go: master, tip

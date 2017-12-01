@@ -1,0 +1,7 @@
+---
+name: clamav-mirror
+
+dependencies: []
+
+files:
+- src/github.com/mxplusb/clamav/**/*

@@ -1,0 +1,7 @@
+set -e
+
+export GOPATH=$(pwd)
+
+cd src/github.com/mxplusb/clamav
+
+GOOS=linux GOARCH=amd64 go build

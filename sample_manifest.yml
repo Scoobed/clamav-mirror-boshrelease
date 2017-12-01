@@ -1,0 +1,32 @@
+---
+name: clamav-mirror
+
+releases:
+- name: clamav-mirror
+  version: latest
+
+stemcells:
+- alias: trusty
+  os: ubuntu-trusty
+  version: latest
+
+instance_groups:
+- name: mirror
+  instances: ((mirror_instances))
+  vm_type: ((mirror_vm_type))
+  stemcell: trusty
+  azs: [ ((mirror_azs)) ]
+  networks:
+  - name: ((mirror_network_name))
+    default: [dns, gateway]
+  jobs:
+  - name: clamav-mirror
+    release: clamav-mirror
+    properties: {}
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  serial: false
+  canary_watch_time: 1000-120000
+  update_watch_time: 1000-120000

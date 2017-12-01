@@ -1,0 +1,13 @@
+---
+name: clamav-mirror
+
+templates:
+  ctl.erb: bin/ctl
+
+packages:
+  - clamav-mirror
+
+properties:
+  clamav.mirror_port:
+    default: 8080
+    description: HTTP listen port
