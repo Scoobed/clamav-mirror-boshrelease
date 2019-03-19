@@ -1,4 +1,4 @@
 [submodule "src/src/github.com/mxplusb/clamav"]
 	path = src/src/github.com/mxplusb/clamav
-	url = https://github.com/mxplusb/clamav
+	url = https://github.com/mxplusb/clamav.git
 	branch = master
