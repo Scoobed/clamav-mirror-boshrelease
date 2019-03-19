@@ -3,6 +3,9 @@
 RUN_DIR=/var/vcap/sys/run/clamav-mirror
 LOG_DIR=/var/vcap/sys/log/clamav-mirror
 PIDFILE=${RUN_DIR}/pid
+PRIMARY_MIRROR=<%= p('primary.mirror') %>
+SECONDARY_MIRROR=<%= p('secondary.mirror') %>
+
 
 case $1 in
 
@@ -14,7 +17,7 @@ case $1 in
 
     cd /var/vcap/packages/clamav-mirror
 
-    exec ./clamav -port <%= properties.clamav.mirror_port %> \
+    exec ./clamav -port <%= p('clamav.mirror_port') %> \
       >>  $LOG_DIR/clamav-mirror.stdout.log \
       2>> $LOG_DIR/clamav-mirror.stderr.log
 

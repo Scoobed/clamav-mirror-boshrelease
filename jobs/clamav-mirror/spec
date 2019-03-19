@@ -12,3 +12,11 @@ properties:
   clamav.mirror_port:
     default: 8080
     description: HTTP listen port
+  
+  primary.mirror:
+    default: http://database.clamav.net
+    description: Primary Clamav Mirror
+
+  secondary.mirror:
+    default: https://pivotal-clamav-mirror.s3.amazonaws.com
+    description: Secondary Clamav Mirror
