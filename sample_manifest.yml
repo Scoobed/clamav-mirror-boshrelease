@@ -6,15 +6,15 @@ releases:
   version: latest
 
 stemcells:
-- alias: trusty
-  os: ubuntu-trusty
+- alias: xenial
+  os: ubuntu-xenial
   version: latest
 
 instance_groups:
 - name: mirror
   instances: ((mirror_instances))
   vm_type: ((mirror_vm_type))
-  stemcell: trusty
+  stemcell: xenial
   azs: [ ((mirror_azs)) ]
   networks:
   - name: ((mirror_network_name))
