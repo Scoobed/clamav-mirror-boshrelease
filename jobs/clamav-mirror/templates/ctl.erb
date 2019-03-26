@@ -3,8 +3,8 @@
 RUN_DIR=/var/vcap/sys/run/clamav-mirror
 LOG_DIR=/var/vcap/sys/log/clamav-mirror
 PIDFILE=${RUN_DIR}/pid
-PRIMARY_MIRROR=<%= p('primary.mirror') %>
-SECONDARY_MIRROR=<%= p('secondary.mirror') %>
+export PRIMARY_MIRROR=<%= p('primary.mirror') %>
+export SECONDARY_MIRROR=<%= p('secondary.mirror') %>
 
 
 case $1 in
