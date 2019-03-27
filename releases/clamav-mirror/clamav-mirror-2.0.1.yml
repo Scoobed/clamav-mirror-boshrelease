@@ -1,0 +1,15 @@
+name: clamav-mirror
+version: 2.0.1
+commit_hash: 8b15d46
+uncommitted_changes: false
+jobs:
+- name: clamav-mirror
+  version: 26e156bf416ace0c8cfa3bf569717d34cbbd3a88
+  fingerprint: 26e156bf416ace0c8cfa3bf569717d34cbbd3a88
+  sha1: 7b1fb01fdc8af27616d839d93c342c22b589b357
+packages:
+- name: clamav-mirror
+  version: 9c67c73db21553995910e1ee5bddb82c8a5ea84e
+  fingerprint: 9c67c73db21553995910e1ee5bddb82c8a5ea84e
+  sha1: 69ce89138d611f925724f05e372e3ca4c0cc2f0b
+  dependencies: []
